@@ -61,7 +61,7 @@ it('renders controls aligned with Android TIMPush demo', async () => {
   expect(text).toContain('推送 ID');
   expect(text).toContain('将该 ID 填入控制台或服务端接口，即可向当前设备发送测试推送。');
   expect(text).not.toContain('SDKAppID');
-  expect(text).not.toContain('1400187352');
+  expect(text).not.toContain('0');
   expect(text).toContain('复制');
   expect(text).toContain('刷新');
   expect(text).toContain('更多操作');
@@ -75,8 +75,8 @@ it('renders controls aligned with Android TIMPush demo', async () => {
   expect(text).not.toContain('请输入 SDKAppID');
   expect(tree.root.findAllByType(TextInput)).toHaveLength(1);
   expect(Push.registerPush).toHaveBeenCalledWith(
-    1400187352,
-    'ZH4kE76C5BAYgP2wlbK4iRCiAxLGTGbIh7hPTXV0T8J22ZCdp3vNsEGJgXVdlNm2',
+    0,
+    '',
     expect.any(Function),
     expect.any(Function),
   );
